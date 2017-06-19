@@ -1,7 +1,5 @@
 package com.example.configuration;
 
-import java.util.Locale;
-
 import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
@@ -15,13 +13,15 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
+import java.util.Locale;
+
 @Configuration
 public class WebMvcConfiguration extends WebMvcConfigurerAdapter {
 
 	@Bean
 	public LocaleResolver localeResolver() {
 		SessionLocaleResolver slr = new SessionLocaleResolver();
-		slr.setDefaultLocale(new Locale("es"));
+		slr.setDefaultLocale(new Locale("en"));
 		return slr;
 	}
 

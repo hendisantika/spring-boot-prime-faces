@@ -26,7 +26,7 @@
 						</p:panelGrid>
 						<br/>
 						<p:panelGrid border="0" columns="1" styleClass="noBorders">
-							<p:commandButton onclick="document.getElementById('loginForm').submit()" value="Ingresar"/>
+							<p:commandButton onclick="document.getElementById('loginForm').submit()" value="Login"/>
 						</p:panelGrid>
 						<c:if test="${param.error}">
 							<h:outputText  style="font-size: 15; color: #FF1C19;" value="#{language.getMessage('login.error')}" />

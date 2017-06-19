@@ -1,16 +1,15 @@
 package com.example.view;
 
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+import org.springframework.stereotype.Controller;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.MessageSource;
-import org.springframework.stereotype.Controller;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
 
 @ManagedBean(name = "language")
 @SessionScoped
@@ -30,8 +29,8 @@ public class Language {
 		super();
 		languages.put("en", Locale.ENGLISH);
 		languages.put("es", new Locale("es"));
-		this.localeCode = "es";
-		this.locale = new Locale("es");
+		this.localeCode = "en";
+		this.locale = new Locale("en");
 		FacesContext.getCurrentInstance().getViewRoot().setLocale(this.locale);
 	}
 

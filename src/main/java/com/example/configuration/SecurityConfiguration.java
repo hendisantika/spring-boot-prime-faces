@@ -56,9 +56,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.logoutSuccessUrl("/login.faces").permitAll()
 				.and()				
 				.exceptionHandling().accessDeniedPage("/error/access-denied.faces");
-		
 	}
-	
+
 	@Override
 	public void configure(WebSecurity web) throws Exception {
 	    web
