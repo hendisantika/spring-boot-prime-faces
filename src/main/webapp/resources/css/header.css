@@ -1,0 +1,19 @@
+.noBorders tr, .noBorders td {
+	border: none !important;
+}
+
+.button-usa {
+	border: none;
+ 	height: 32px;
+    width: 32px;
+	background: url('../resources/images/usa.png') no-repeat;
+	cursor: pointer;
+}
+
+.button-mexico {
+	border: none;
+ 	height: 32px;
+    width: 32px;
+	background: url('../resources/images/mexico.png') no-repeat;
+	cursor: pointer;
+}

@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+
+<f:view>
+	<h:head>
+		<h:outputStylesheet library="css" name="header.css" />		
+	</h:head>
+	
+	<h:body>
+		<div style="float: right;">
+			<h:form>
+				<p:panelGrid styleClass="noBorders" columns="2">
+					<h:commandButton styleClass="button-usa" type="submit" action="#{language.countryLocaleCodeChanged('en')}" />
+					<h:commandButton styleClass="button-mexico" type="submit" action="#{language.countryLocaleCodeChanged('es')}" />
+				</p:panelGrid>
+			</h:form>
+		</div>
+		<br/><br/>
+	</h:body>
+</f:view>
+</html>

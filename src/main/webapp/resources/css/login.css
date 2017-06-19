@@ -1,0 +1,3 @@
+.noBorders tr, .noBorders td {
+	border: none !important;
+}
