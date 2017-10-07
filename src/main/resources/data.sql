@@ -23,8 +23,6 @@ INSERT INTO employee(name, last_name, email, phone, active) values ('Iggy','Pop'
 INSERT INTO employee(name, last_name, email, phone, active) values ('Dead','Kennedys','holiday@cambodia.com','2389096457',false);
 INSERT INTO employee(name, last_name, email, phone, active) values ('The','Cure','dont@cry.com','8749340987',false);
 
-
-
 INSERT INTO ROLE values(1, 'ADMIN');
 
 
