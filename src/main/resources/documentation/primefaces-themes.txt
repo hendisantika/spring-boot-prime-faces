@@ -1,2 +1,2 @@
-Regerence
+Reference
 http://primefaces.org/themes
