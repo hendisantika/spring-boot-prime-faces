@@ -1,20 +1,59 @@
-2017-06-19 11:32:27 - HHH000389: Unsuccessful: alter table user_role drop foreign key FKa68196081fvovjhkek5m97n3y
-2017-06-19 11:32:27 - Table 'spring-primefaces.user_role' doesn't exist
-2017-06-19 11:32:27 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK859n2jvi8ivhui0rl0esws6o
-2017-06-19 11:32:27 - Table 'spring-primefaces.user_role' doesn't exist
-2017-06-19 11:35:48 - HHH000389: Unsuccessful: alter table user_role drop foreign key FKa68196081fvovjhkek5m97n3y
-2017-06-19 11:35:48 - Table 'spring-primefaces.user_role' doesn't exist
-2017-06-19 11:35:48 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK859n2jvi8ivhui0rl0esws6o
-2017-06-19 11:35:48 - Table 'spring-primefaces.user_role' doesn't exist
-2017-06-19 11:49:11 - HHH000389: Unsuccessful: alter table user_role drop foreign key FKa68196081fvovjhkek5m97n3y
-2017-06-19 11:49:11 - Table 'spring-primefaces.user_role' doesn't exist
-2017-06-19 11:49:11 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK859n2jvi8ivhui0rl0esws6o
-2017-06-19 11:49:11 - Table 'spring-primefaces.user_role' doesn't exist
-2017-06-19 11:50:25 - HHH000389: Unsuccessful: alter table user_role drop foreign key FKa68196081fvovjhkek5m97n3y
-2017-06-19 11:50:25 - Table 'spring-primefaces.user_role' doesn't exist
-2017-06-19 11:50:25 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK859n2jvi8ivhui0rl0esws6o
-2017-06-19 11:50:25 - Table 'spring-primefaces.user_role' doesn't exist
-2017-06-19 13:54:09 - HHH000389: Unsuccessful: alter table user_role drop foreign key FKa68196081fvovjhkek5m97n3y
-2017-06-19 13:54:09 - Table 'spring-primefaces.user_role' doesn't exist
-2017-06-19 13:54:09 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK859n2jvi8ivhui0rl0esws6o
-2017-06-19 13:54:09 - Table 'spring-primefaces.user_role' doesn't exist
+2017-10-08 06:23:57 - Application startup failed
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoClassDefFoundError: javax/faces/webapp/FacesServlet
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.example.DemoApplication.main(DemoApplication.java:20)
+Caused by: java.lang.NoClassDefFoundError: javax/faces/webapp/FacesServlet
+	at com.sun.faces.config.FacesInitializer.<clinit>(FacesInitializer.java:105)
+	at com.example.configuration.ConfigureJSF$JsfServletRegistrationBean.onStartup(ConfigureJSF.java:35)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.selfInitialize(EmbeddedWebApplicationContext.java:229)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.access$000(EmbeddedWebApplicationContext.java:89)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext$1.onStartup(EmbeddedWebApplicationContext.java:213)
+	at org.springframework.boot.context.embedded.jetty.ServletContextInitializerConfiguration$Initializer.callInitializers(ServletContextInitializerConfiguration.java:83)
+	at org.springframework.boot.context.embedded.jetty.ServletContextInitializerConfiguration$Initializer.doStart(ServletContextInitializerConfiguration.java:72)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:131)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:105)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:113)
+	at org.eclipse.jetty.server.handler.ScopedHandler.doStart(ScopedHandler.java:120)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:844)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:344)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1501)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1463)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:785)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:261)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:545)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:131)
+	at org.eclipse.jetty.server.Server.start(Server.java:452)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:105)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:113)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:419)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainer.initialize(JettyEmbeddedServletContainer.java:104)
+	at org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainer.<init>(JettyEmbeddedServletContainer.java:82)
+	at org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainerFactory.getJettyEmbeddedServletContainer(JettyEmbeddedServletContainerFactory.java:561)
+	at org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainerFactory.getEmbeddedServletContainer(JettyEmbeddedServletContainerFactory.java:190)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134)
+	... 8 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.faces.webapp.FacesServlet
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 40 common frames omitted
+2017-10-08 06:24:42 - HHH000389: Unsuccessful: alter table user_role drop foreign key FKa68196081fvovjhkek5m97n3y
+2017-10-08 06:24:42 - Table 'spring-primefaces.user_role' doesn't exist
+2017-10-08 06:24:42 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK859n2jvi8ivhui0rl0esws6o
+2017-10-08 06:24:42 - Table 'spring-primefaces.user_role' doesn't exist
+2017-10-08 06:27:04 - HHH000389: Unsuccessful: alter table user_role drop foreign key FKa68196081fvovjhkek5m97n3y
+2017-10-08 06:27:04 - Table 'spring-primefaces.user_role' doesn't exist
+2017-10-08 06:27:04 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK859n2jvi8ivhui0rl0esws6o
+2017-10-08 06:27:04 - Table 'spring-primefaces.user_role' doesn't exist

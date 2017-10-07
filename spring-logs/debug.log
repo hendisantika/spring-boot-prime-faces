@@ -1,29 +1,19 @@
-2017-06-19 11:32:23 - Starting DemoApplication on Hendis-MacBook-Pro.local with PID 3165 (/Users/hendisantika/Documents/IdeaProjects/SpringBootPrimeFacesIntegration/target/classes started by hendisantika in /Users/hendisantika/Documents/IdeaProjects/SpringBootPrimeFacesIntegration)
-2017-06-19 11:32:23 - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
-2017-06-19 11:32:23 - The following profiles are active: dev
-2017-06-19 11:32:28 - Started DemoApplication in 20.787 seconds (JVM running for 24.325)
-2017-06-19 11:32:28 - Application has been launched
-2017-06-19 11:33:38 - User not found: test@test.com
-2017-06-19 11:33:38 - User not found: test@test.com
-2017-06-19 11:35:44 - Starting DemoApplication on Hendis-MacBook-Pro.local with PID 3237 (/Users/hendisantika/Documents/IdeaProjects/SpringBootPrimeFacesIntegration/target/classes started by hendisantika in /Users/hendisantika/Documents/IdeaProjects/SpringBootPrimeFacesIntegration)
-2017-06-19 11:35:44 - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
-2017-06-19 11:35:44 - The following profiles are active: dev
-2017-06-19 11:35:49 - Started DemoApplication in 20.817 seconds (JVM running for 24.336)
-2017-06-19 11:35:49 - Application has been launched
-2017-06-19 11:49:07 - Starting DemoApplication on Hendis-MacBook-Pro.local with PID 3444 (/Users/hendisantika/Documents/IdeaProjects/SpringBootPrimeFacesIntegration/target/classes started by hendisantika in /Users/hendisantika/Documents/IdeaProjects/SpringBootPrimeFacesIntegration)
-2017-06-19 11:49:07 - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
-2017-06-19 11:49:07 - The following profiles are active: dev
-2017-06-19 11:49:12 - Started DemoApplication in 20.72 seconds (JVM running for 24.24)
-2017-06-19 11:49:12 - Application has been launched
-2017-06-19 11:49:29 - User not found: admin
-2017-06-19 11:49:41 - User not found: admin
-2017-06-19 11:50:21 - Starting DemoApplication on Hendis-MacBook-Pro.local with PID 3483 (/Users/hendisantika/Documents/IdeaProjects/SpringBootPrimeFacesIntegration/target/classes started by hendisantika in /Users/hendisantika/Documents/IdeaProjects/SpringBootPrimeFacesIntegration)
-2017-06-19 11:50:21 - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
-2017-06-19 11:50:21 - The following profiles are active: dev
-2017-06-19 11:50:28 - Started DemoApplication in 22.961 seconds (JVM running for 26.565)
-2017-06-19 11:50:28 - Application has been launched
-2017-06-19 13:54:05 - Starting DemoApplication on Hendis-MacBook-Pro.local with PID 3864 (/Users/hendisantika/Documents/IdeaProjects/SpringBootPrimeFacesIntegration/target/classes started by hendisantika in /Users/hendisantika/Documents/IdeaProjects/SpringBootPrimeFacesIntegration)
-2017-06-19 13:54:05 - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
-2017-06-19 13:54:05 - The following profiles are active: dev
-2017-06-19 13:54:11 - Started DemoApplication in 21.226 seconds (JVM running for 24.732)
-2017-06-19 13:54:11 - Application has been launched
+2017-10-08 06:23:56 - Starting DemoApplication on Hendis-MacBook-Pro.local with PID 19143 (/Users/hendisantika/Documents/IdeaProjects/SpringBootPrimeFacesIntegration/target/classes started by hendisantika in /Users/hendisantika/Documents/IdeaProjects/SpringBootPrimeFacesIntegration)
+2017-10-08 06:23:56 - Running with Spring Boot v1.5.7.RELEASE, Spring v4.3.11.RELEASE
+2017-10-08 06:23:56 - The following profiles are active: dev
+2017-10-08 06:24:33 - Starting DemoApplication on Hendis-MacBook-Pro.local with PID 19212 (/Users/hendisantika/Documents/IdeaProjects/SpringBootPrimeFacesIntegration/target/classes started by hendisantika in /Users/hendisantika/Documents/IdeaProjects/SpringBootPrimeFacesIntegration)
+2017-10-08 06:24:33 - Running with Spring Boot v1.5.7.RELEASE, Spring v4.3.11.RELEASE
+2017-10-08 06:24:33 - The following profiles are active: dev
+2017-10-08 06:24:44 - Started DemoApplication in 11.677 seconds (JVM running for 15.607)
+2017-10-08 06:24:44 - Application has been launched
+2017-10-08 06:26:54 - Starting DemoApplication on Hendis-MacBook-Pro.local with PID 19273 (/Users/hendisantika/Documents/IdeaProjects/SpringBootPrimeFacesIntegration/target/classes started by hendisantika in /Users/hendisantika/Documents/IdeaProjects/SpringBootPrimeFacesIntegration)
+2017-10-08 06:26:54 - Running with Spring Boot v1.5.7.RELEASE, Spring v4.3.11.RELEASE
+2017-10-08 06:26:54 - The following profiles are active: dev
+2017-10-08 06:27:06 - Started DemoApplication in 11.643 seconds (JVM running for 15.448)
+2017-10-08 06:27:06 - Application has been launched
+2017-10-08 06:34:01 - User not found: root
+2017-10-08 06:34:01 - User not found: root
+2017-10-08 06:34:52 - User not found: email
+2017-10-08 06:34:52 - User not found: email
+2017-10-08 06:37:13 - User not found: email
+2017-10-08 06:37:13 - User not found: email
