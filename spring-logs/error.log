@@ -57,3 +57,7 @@ Caused by: java.lang.ClassNotFoundException: javax.faces.webapp.FacesServlet
 2017-10-08 06:27:04 - Table 'spring-primefaces.user_role' doesn't exist
 2017-10-08 06:27:04 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK859n2jvi8ivhui0rl0esws6o
 2017-10-08 06:27:04 - Table 'spring-primefaces.user_role' doesn't exist
+2017-10-08 07:06:11 - HHH000389: Unsuccessful: alter table user_role drop foreign key FKa68196081fvovjhkek5m97n3y
+2017-10-08 07:06:11 - Table 'spring-primefaces.user_role' doesn't exist
+2017-10-08 07:06:11 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK859n2jvi8ivhui0rl0esws6o
+2017-10-08 07:06:11 - Table 'spring-primefaces.user_role' doesn't exist

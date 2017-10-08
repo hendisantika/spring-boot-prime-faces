@@ -10,5 +10,13 @@ When you will launch the application for the first time, go to application.prope
 
 To DO Things :
 1. Go to http://localhost:8080/registration.faces and register your user
+![Registration Page](images/registration.png "Logo Title Text 1")
+
+
+
+
 2. Go to http://localhost:8080/login.faces and login with your credentials
-2. Go to http://localhost:8080/admin/home.faces to see employee list
+
+
+
+3. Go to http://localhost:8080/admin/index.faces to see employee list
