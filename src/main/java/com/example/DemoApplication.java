@@ -1,8 +1,5 @@
 package com.example;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -10,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
+
+import javax.servlet.ServletContext;
 
 @SpringBootApplication
 public class DemoApplication {
@@ -27,7 +26,7 @@ public class DemoApplication {
 	static class ConfigureJSFContextParameters implements ServletContextInitializer {
 
 		@Override
-		public void onStartup(ServletContext servletContext) throws ServletException {
+		public void onStartup(ServletContext servletContext) {
 
 			servletContext.setInitParameter("javax.faces.DEFAULT_SUFFIX", ".xhtml");
 			servletContext.setInitParameter("javax.faces.PARTIAL_STATE_SAVING_METHOD", "true");
@@ -43,7 +42,7 @@ public class DemoApplication {
 	static class ConfigureJSFContextParametersProd implements ServletContextInitializer {
 
 		@Override
-		public void onStartup(ServletContext servletContext) throws ServletException {
+		public void onStartup(ServletContext servletContext) {
 
 			servletContext.setInitParameter("javax.faces.DEFAULT_SUFFIX", ".xhtml");
 			servletContext.setInitParameter("javax.faces.PARTIAL_STATE_SAVING_METHOD", "true");
