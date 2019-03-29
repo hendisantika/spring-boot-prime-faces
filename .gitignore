@@ -22,4 +22,4 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
-spring-logs/archived/
+spring-logs/*
