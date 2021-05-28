@@ -1,12 +1,11 @@
 package com.example.service;
 
-import java.util.List;
-
+import com.example.model.Employee;
+import com.example.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.model.Employee;
-import com.example.repository.EmployeeRepository;
+import java.util.List;
 
 @Service("employeeService")
 public class EmployeeServiceImpl implements EmployeeService {
@@ -21,7 +20,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	public Employee getEmployeeById(long id) {
-		return employeeRepository.findOne(id);
+		return employeeRepository.findById(id).get();
 	}
 
 }

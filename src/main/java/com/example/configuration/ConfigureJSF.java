@@ -1,42 +1,26 @@
 package com.example.configuration;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.sun.faces.config.FacesInitializer;
+import javax.faces.webapp.FacesServlet;
+import javax.servlet.ServletContext;
+import java.util.Arrays;
 
 @Configuration
 public class ConfigureJSF {
 
 	@Bean
-	public ServletRegistrationBean facesServletRegistration() {
+	ServletRegistrationBean jsfServletRegistration(ServletContext servletContext) {
+		//spring boot only works if this is set
+		servletContext.setInitParameter("com.sun.faces.forceLoadConfiguration", Boolean.TRUE.toString());
 
-		ServletRegistrationBean servletRegistrationBean = new JsfServletRegistrationBean();
-
-		return servletRegistrationBean;
-	}
-
-	public class JsfServletRegistrationBean extends ServletRegistrationBean {
-
-		public JsfServletRegistrationBean() {
-			super();
-		}
-
-		@Override
-		public void onStartup(ServletContext servletContext) throws ServletException {
-
-			FacesInitializer facesInitializer = new FacesInitializer();
-
-			Set<Class<?>> clazz = new HashSet<Class<?>>();
-			clazz.add(ConfigureJSF.class);
-			facesInitializer.onStartup(clazz, servletContext);
-		}
+		//FacesServlet registration
+		ServletRegistrationBean srb = new ServletRegistrationBean();
+		srb.setServlet(new FacesServlet());
+		srb.setUrlMappings(Arrays.asList("*.xhtml"));
+		srb.setLoadOnStartup(1);
+		return srb;
 	}
 }
