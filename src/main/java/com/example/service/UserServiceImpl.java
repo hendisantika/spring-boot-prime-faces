@@ -1,13 +1,9 @@
 package com.example.service;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 
-import javax.transaction.Transactional;
-
+import com.example.model.Role;
+import com.example.model.User;
+import com.example.repository.RoleRepository;
+import com.example.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,11 +14,15 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import com.example.model.Role;
-import com.example.model.User;
-import com.example.repository.RoleRepository;
-import com.example.repository.UserRepository;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 
 @Service("userService")
@@ -50,7 +50,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 		user.setActive(true);
 		Role userRole = roleRepository.findByRole("ADMIN");
-		user.setRoles(new HashSet<>(Arrays.asList(userRole)));
+		user.setRoles(new HashSet<>(Collections.singletonList(userRole)));
 		userRepository.save(user);
 	}
 
