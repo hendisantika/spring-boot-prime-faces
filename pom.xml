@@ -79,7 +79,7 @@
 		<dependency>
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
-			<version>13.0.15-LTS</version>
+			<version>13.0.16-LTS</version>
 		</dependency>
 		<dependency>
 			<groupId>com.mysql</groupId>
