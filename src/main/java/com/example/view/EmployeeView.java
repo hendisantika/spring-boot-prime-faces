@@ -1,19 +1,17 @@
 package com.example.view;
 
 
-import java.util.List;
-
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-
 import com.example.model.Employee;
 import com.example.service.EmployeeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
-@ManagedBean(name="employeeView")
-@RequestScoped
+import java.util.List;
+
+@Component("employeeView")
+@Scope("request")
 @Controller
 public class EmployeeView{
 		

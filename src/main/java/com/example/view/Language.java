@@ -1,20 +1,21 @@
 package com.example.view;
 
+import jakarta.faces.context.FacesContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
-import javax.faces.context.FacesContext;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-@ManagedBean(name = "language")
-@SessionScoped
+@Component("language")
+@Scope("session")
 @Controller
-public class Language {
+public class Language implements Serializable {
 
 	@Autowired
 	private MessageSource messageSource;
@@ -44,7 +45,7 @@ public class Language {
 			if (entry.getValue().toString().equals(language)) {
 				this.locale = entry.getValue();
 				this.localeCode = entry.getKey();
-				FacesContext.getCurrentInstance().getViewRoot().setLocale((Locale) entry.getValue());
+				FacesContext.getCurrentInstance().getViewRoot().setLocale(entry.getValue());
 			}
 		}
 	}

@@ -1,6 +1,5 @@
 package com.example.configuration;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -18,12 +17,6 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @EnableWebSecurity
 public class SecurityConfiguration {
 
-	@Autowired
-	private BCryptPasswordEncoder bCryptPasswordEncoder;
-
-
-	@Autowired
-	private UserDetailsService userDetailsService;
 
 //	@Override
 //	protected void configure(AuthenticationManagerBuilder auth)
@@ -34,11 +27,11 @@ public class SecurityConfiguration {
 //	}
 
 	@Bean
-	public DaoAuthenticationProvider authenticationProvider() {
+    public DaoAuthenticationProvider authenticationProvider(BCryptPasswordEncoder passwordEncoder, UserDetailsService userDetailsService) {
 		DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
 
-		authProvider.setUserDetailsService(userDetailsService());
-//		authProvider.setPasswordEncoder(passwordEncoder());
+        authProvider.setUserDetailsService(userDetailsService);
+        authProvider.setPasswordEncoder(passwordEncoder);
 
 		return authProvider;
 	}
@@ -97,8 +90,7 @@ public class SecurityConfiguration {
 	
 	@Bean
 	public BCryptPasswordEncoder passwordEncoder() {
-		BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
-		return bCryptPasswordEncoder;
+        return new BCryptPasswordEncoder();
 	}
 
 }
