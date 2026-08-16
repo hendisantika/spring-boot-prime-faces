@@ -11,7 +11,7 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.security.web.servlet.util.matcher.PathPatternRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
@@ -28,9 +28,8 @@ public class SecurityConfiguration {
 
 	@Bean
     public DaoAuthenticationProvider authenticationProvider(BCryptPasswordEncoder passwordEncoder, UserDetailsService userDetailsService) {
-		DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
+		DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider(userDetailsService);
 
-        authProvider.setUserDetailsService(userDetailsService);
         authProvider.setPasswordEncoder(passwordEncoder);
 
 		return authProvider;
@@ -70,9 +69,8 @@ public class SecurityConfiguration {
 						.failureUrl("/login.faces?error=true")
 				)
 				.logout(logout -> logout
-								.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+								.logoutRequestMatcher(PathPatternRequestMatcher.pathPattern("/logout"))
 								.logoutSuccessUrl("/login?logout")
-				.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
 		        .invalidateHttpSession(true)
 				.logoutSuccessUrl("/login.faces").permitAll()
 //				.exceptionHandling().accessDeniedPage("/error/access-denied.faces")
