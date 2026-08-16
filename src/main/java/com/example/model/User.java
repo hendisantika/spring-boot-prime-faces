@@ -18,7 +18,7 @@ import org.springframework.data.annotation.Transient;
 import java.util.Set;
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User {
 
 	@Id
