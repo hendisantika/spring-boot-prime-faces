@@ -6,6 +6,10 @@
 - Email notifications (smtp gmail)
 - Spring Security
 
+## Requirements
+- JDK 25
+- Maven 3.9+
+
 ## Things to do:
 1. Clone repository:
     ```
