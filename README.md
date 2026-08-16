@@ -24,7 +24,7 @@
     mvn clean spring-boot:run
     ```
 
-When you will launch the application for the first time, go to application.properties file and set spring.datasource.initialize=true (return the value to false when the application will be relaunched)
+When you will launch the application for the first time, run it with `--spring.sql.init.mode=always --spring.jpa.defer-datasource-initialization=true` to seed the sample employee data (omit these flags on later runs if you don't want the seed data re-applied)
 
 To DO Things :
 1. Go to http://localhost:8080/registration.faces and register your user
@@ -38,6 +38,6 @@ To DO Things :
 ![Login Page](images/login.png "Login Page")
 
 
-3. Go to http://localhost:8080/admin/index.faces to see employee list
+3. Go to http://localhost:8080/admin/home.faces to see employee list
 
 ![Employees Page](images/employees.png "Employees Page")
